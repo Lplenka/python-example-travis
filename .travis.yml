@@ -3,4 +3,10 @@ sudo: false
 python:
 - 2.7
 - 3.4
+
+install:
+  - "pip install flake8"
+
+before_script:
+  - "flake8 ."
 script: py.test -v
